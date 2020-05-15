@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    
+    <li><a href="#/home">首页</a></li>
+    <li><a href="#/news">新闻页</a></li>
+    <li><a href="#/profile">个人中心</a></li>
+
+    <div id="content">
+
+    </div>
+
+</ul>
+
+<script>
+
+    window.onhashchange=function () {
+
+        console.log(location.hash)
+
+        let hash = location.hash
+        let _html=''
+
+        if(hash==='#/home'){
+            // 加载首页
+            _html='首页'
+        }else if(hash==='#/news'){
+            // 加载新闻页
+            _html='新闻页'
+        }else if(hash==='#/profile'){
+            // 加载个人中心
+            _html='个人中心'
+        }
+
+        document.getElementById('content').innerHTML=_html
+
+    }
+
+
+</script>
+
+</body>
+</html>
